@@ -12,9 +12,10 @@ code {
     monospace;
 }
 
-#cel{
-width: 5em;
-height: 5em;
+#cel1 {
+  width: 70px;
+  height: 70px;
 
-
+  border: 1px solid #aaaaaa;
 }
+
