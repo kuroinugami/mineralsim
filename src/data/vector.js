@@ -23,9 +23,9 @@ function Vector(densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
 */
 function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
     
-    const calMPulpa = ()=>(caudalP*densidadP)    
-    const calMSolido = () => (calMPulpa()*porcSolido)
-    const calFino = () => (ley*calMSolido()) 
+    const calMPulpa = ()=>(caudalP1*densidadP1)    
+    const calMSolido = () => (calMPulpa()*porcSolido1)
+    const calFino = () => (ley1*calMSolido()) 
 
     const MPulpa1= calMPulpa();
     const MSolido1= calMSolido();
@@ -69,14 +69,20 @@ function RecupMasa(listaVAlim,listaVRelave,listaVConcentrado){
             recuperacion:recuperacion
     }
 }
-
+/*
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
     return{ concComun:concComun,
             alimentacion:alimentacion
             //TO BE CONTINUED    
         }
 }
+*/
 
 
-
-export default Vector;
+export { 
+Vector as default,
+Celda,
+sumaParam,
+RecupMasa,
+//RecupLey
+};

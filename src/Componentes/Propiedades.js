@@ -15,10 +15,10 @@ const dt1 =document.getElementById('dt1'+num).value;
 const dt2 =document.getElementById('dt2'+num).value;
 const dt3 =document.getElementById('dt3'+num).value;
 const dt4 =document.getElementById('dt4'+num).value;
-console.log(Vector(dt1,dt2,dt3,dt4));
-setdata1((c)=>Vector(dt1,dt2,dt3,dt4)[0]);
-setdata2((c)=>Vector(dt1,dt2,dt3,dt4)[1]);
-setdata3((c)=>Vector(dt1,dt2,dt3,dt4)[2]);
+console.log(Vector('vec'+num,dt1,dt2,dt3,dt4));
+setdata1((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MPulpa);
+setdata2((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido);
+setdata3((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).Fino);
 const data ={
 data1: dt1,
 data2:dt2,
