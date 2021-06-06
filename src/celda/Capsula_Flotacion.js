@@ -1,12 +1,12 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
-import Panel from './Propiedades';
+import img from '../Recursos/celda.png';
 
 //
 
 
 const Capsula =()=>{
-
+/*
     const data = [0,0,0,0];
     sessionStorage.setItem('registro'+1,data);
     sessionStorage.setItem('registro'+2,data);
@@ -81,7 +81,12 @@ ReactDOM.render(panel,
     document.getElementById('root2')
   );
   
+*/
 
+return  <img className='mw-100' id='cel1' src={img}/>
+
+
+}
 
 
 export default Capsula;

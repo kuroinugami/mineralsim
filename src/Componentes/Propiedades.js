@@ -9,9 +9,6 @@ const Panel=({num})=>{
     const [data3,setdata3]=useState(0);
 
 
-   
-    
-
 
  const calcular=()=>{
 const dt1 =document.getElementById('dt1'+num).value;
@@ -37,19 +34,19 @@ const main=<>
     
 <div className='row'>
 
-<table className='col-6'>
+<table className='col-6'  border = "1">
     <tbody>
-<tr><td>Densidad</td><td><input type='text' id= {'dt1'+num} defaultValue= '0'/></td></tr>
-<tr><td>Solido%</td><td><input type='text'id={'dt2'+num}defaultValue= '0'/></td></tr>
-<tr><td>Ley</td><td><input type='text'id={'dt3'+num}defaultValue= '0'/></td></tr>
-<tr><td>Caudal</td><td><input type='text'id={'dt4'+num}defaultValue= '0'/></td></tr>
+<tr><td>Densidad(T/m3)</td><td><input type='text' id= {'dt1'+num} defaultValue= '0'/></td></tr>
+<tr><td>Solido(%)</td><td><input type='text'id={'dt2'+num}defaultValue= '0'/></td></tr>
+<tr><td>Ley(%)</td><td><input type='text'id={'dt3'+num}defaultValue= '0'/></td></tr>
+<tr><td>Caudal(m3/h)</td><td><input type='text'id={'dt4'+num}defaultValue= '0'/></td></tr>
 </tbody>
 </table>
-<table className='col-6'>
+<table className='col-6'  border = "1">
 <tbody>
-<tr><td>CalMPulpa</td><td>{data1}</td></tr>
-<tr><td>CalMSolido</td><td>{data2}</td></tr>
-<tr><td>CalFino</td><td>{data3}</td></tr>
+<tr><td>Masa Pulpa(T/h)</td><td><p id={'MP1'+num}>{data1}</p></td></tr>
+<tr><td>Masa Solido(T/h)</td><td><p id={'MP2'+num}>{data2}</p></td></tr>
+<tr><td>Fino(T/h)</td><td><p id={'MP3'+num}>{data3}</p></td></tr>
 </tbody>
 </table>
 </div>

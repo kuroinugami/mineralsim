@@ -13,9 +13,25 @@ code {
 }
 
 #cel1 {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
 
   border: 1px solid #aaaaaa;
+}
+#celg {
+  width: 70px;
+  height: 35px;
+
+  border: 1px solid #aaaaaa;
+}
+#con{
+padding: 0px;
+margin: 0px;
+border: 0px;
+
+
+}
+#ttable {
+  border-collapse: collapse;
 }
 
