@@ -67,26 +67,39 @@ function RecupMasa(listaVAlim,listaVConcentrado){
             recuperacion:recuperacion
     }
 }
-/*
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
-    const concComun=sumaParam([listaVConcentrado],'ley')
-    const alimentacion=sumaParam([listaVAlim],'ley')
-    const recuperacion=(concComun/alimentacion)*100
-    const rechazo
     
+    let concComun=0
+    for (const vector in listaVConcentrado) {
+        concComun+=(vector.MPulpa)*(vector.ley)
+    }
+    concComun/=sumaParam(listaVConcentrado,"MPulpa")
+
+    let alimentacion=0
+    for (const vector in listaVAlim) {
+        alimentacion+=(vector.MPulpa)*(vector.ley)
+    }
+    alimentacion/=sumaParam(listaVAlim,"MPulpa")
+
+    let rechazo=0
+    for (const vector in listaVRelave) {
+        rechazo+=(vector.MPulpa)*(vector.ley)
+    }
+    rechazo/=sumaParam(listaVRelave,"MPulpa")
+
+    const recuperacion = ((alimentacion-rechazo)/(concComun-rechazo))*100
+
+
     return{ concComun:concComun,
-        alimentacion:alimentacion,
-        rechazo:rechazo,
-        recuperacion:recuperacion  
+            alimentacion:alimentacion,
+            rechazo:rechazo,
+            recuperacion:recuperacion   
         }
 }
-
-
-*/
 export { 
 Vector as default,
 Celda,
 sumaParam,
 RecupMasa,
-//RecupLey
+RecupLey
 };
