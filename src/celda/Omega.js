@@ -1,6 +1,6 @@
 import React from 'react';
 import prom from '../data/funtion_dysplay';
-import logo from '../Recursos/OMEGA.png';
+import img from '../Recursos/img/Omega.png';
 const Omega=()=>{
 
     /*function drag(ev) {
@@ -8,7 +8,7 @@ const Omega=()=>{
       }
 */
 return<>
-<img id='cel1' className='img-thumbnail'src={logo}/>
+<img className='cel1 con img-thumbnail'src={img}/>
 </>
 }
 

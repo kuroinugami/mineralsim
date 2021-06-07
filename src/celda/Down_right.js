@@ -1,5 +1,6 @@
 import React from 'react';
 import prom from '../data/funtion_dysplay';
+import img from '../Recursos/img/Curvy.png';
 const Down_right=({num})=>{
 
     /*function drag(ev) {
@@ -7,7 +8,7 @@ const Down_right=({num})=>{
       }
 */
 return<>
-<img  id='cel1' className='img-thumbnail'src={'https://es.letrag.com/caracteres/250c.png'}/>
+<img  cl className='cel1 con img-thumbnail t270'src={img}/>
 </>
 }
 

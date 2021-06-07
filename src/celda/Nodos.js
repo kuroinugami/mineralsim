@@ -7,7 +7,7 @@ const Nodos=()=>{
       }
 */
 return<>
-<img id='cel1' className='img-thumbnail'src={'https://cdn2.iconfinder.com/data/icons/user-account/95/2459-Brandfex-Icons-vector-74-512.png'}/>
+<img  className='cel1 con img-thumbnail'src={'https://cdn2.iconfinder.com/data/icons/user-account/95/2459-Brandfex-Icons-vector-74-512.png'}/>
 </>
 }
 

@@ -1,4 +1,5 @@
 import React,{useState}  from 'react';
+import  Vector,{RecupMasa} from '../data/vector';
 
 
 const G_recuperacion=()=>{
@@ -38,7 +39,31 @@ const G_recuperacion=()=>{
         setdata7((c)=>document.getElementById('dt37').innerHTML);
         setdata8((c)=>document.getElementById('dt35').innerHTML);
         setdata9((c)=>document.getElementById('dt314').innerHTML);
-        
+const VAlimentacion= Vector('VAlimentacion',
+document.getElementById('dt17').innerHTML,
+document.getElementById('dt17').innerHTML,
+document.getElementById('dt17').innerHTML,
+document.getElementById('dt17').innerHTML,);
+const VRelave =Vector('VRelave',
+document.getElementById('dt15').innerHTML,
+document.getElementById('dt15').innerHTML,
+document.getElementById('dt15').innerHTML,
+document.getElementById('dt15').innerHTML,);
+const VConcentrado=Vector('VConcentrado',
+document.getElementById('dt114').innerHTML,
+document.getElementById('dt114').innerHTML,
+document.getElementById('dt114').innerHTML,
+document.getElementById('dt114').innerHTML,);
+
+const RM = RecupMasa(VAlimentacion,VConcentrado);
+console.log(RM)
+        setdata15((c)=>RM.concComun);
+        setdata16((c)=>RM.alimentacion);
+        setdata17((c)=>RM.recuperacion);
+        setdata18((c)=>dt3);
+        setdata19((c)=>dt3);
+        setdata20((c)=>dt3);
+        setdata21((c)=>dt3);
         
         }
 
@@ -82,7 +107,7 @@ return <>
 <div className='row'>
 <table border = "1">
 <thead>
-    <tr><td  colspan = "2" ><strong>Recuperacion masica</strong></td></tr>
+    <tr><td  colSpan = {"2"} ><strong>Recuperacion masica</strong></td></tr>
 </thead>
 <tbody>
 <tr><td>Concentrado comun</td><td>{data15}</td></tr>
@@ -94,7 +119,7 @@ return <>
 <div className='row'>
 <table border = "1">
 <thead>
-    <tr><td  colspan = "2" ><strong>Recuperacion por leyes</strong></td></tr>
+    <tr><td  colSpan = {"2"} ><strong>Recuperacion por leyes</strong></td></tr>
 </thead>
 <tbody>
 <tr><td>Concentrado comun</td><td>{data18}</td></tr>

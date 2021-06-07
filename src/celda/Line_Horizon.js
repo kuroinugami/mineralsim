@@ -1,5 +1,5 @@
 import React from 'react';
-
+import img from '../Recursos/img/Line.png';
 const Line_Horizon=()=>{
 
     /*function drag(ev) {
@@ -7,7 +7,7 @@ const Line_Horizon=()=>{
       }
 */
 return<>
-<img id='cel1' className='img-thumbnail'src={'https://w7.pngwing.com/pngs/921/154/png-transparent-angle-brand-line-horizontal-line-text-rectangle-black-thumbnail.png'}/>
+<img  cl className='cel1 con img-thumbnail t90'src={img}/>
 </>
 }
 

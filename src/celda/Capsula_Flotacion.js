@@ -5,7 +5,7 @@ import img from '../Recursos/celda.png';
 //
 
 
-const Capsula =()=>{
+const Capsula =({text=''})=>{
 /*
     const data = [0,0,0,0];
     sessionStorage.setItem('registro'+1,data);
@@ -83,7 +83,10 @@ ReactDOM.render(panel,
   
 */
 
-return  <img className='mw-100' id='cel1' src={img}/>
+
+
+
+return <> <div className='Marco'><img className='cel1 con img-thumbnail' src={img}/><div className='centrado'>{text}</div></div> </>
 
 
 }

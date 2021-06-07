@@ -6,7 +6,7 @@ const Alimentacion=()=>{
       }
 */
 return<>
-<img id='cel1' className='img-thumbnail'src={'https://img.icons8.com/windows/452/circled--v1.png'}/>
+<img className='cel1 con img-thumbnail'src={'https://img.icons8.com/windows/452/circled--v1.png'}/>
 </>
 }
 
