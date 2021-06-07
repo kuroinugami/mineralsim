@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Vector from '../data/vector';
-
+import Truncate from '../data/Truncado';
 const Panel=({num})=>{
     
  
@@ -15,10 +15,14 @@ const dt1 =document.getElementById('dt1'+num).value;
 const dt2 =document.getElementById('dt2'+num).value;
 const dt3 =document.getElementById('dt3'+num).value;
 const dt4 =document.getElementById('dt4'+num).value;
-
-setdata1((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MPulpa);
+/*setdata1((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MPulpa);
 setdata2((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido);
 setdata3((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).Fino);
+*/
+
+setdata1((c)=>Truncate(Vector('vec'+num,dt1,dt2,dt3,dt4).MPulpa,3));
+setdata2((c)=>Truncate(Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido,3));
+setdata3((c)=>Truncate(Vector('vec'+num,dt1,dt2,dt3,dt4).Fino,3));
 }
 
 

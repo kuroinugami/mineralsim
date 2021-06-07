@@ -1,6 +1,6 @@
 import React,{useState}  from 'react';
 import  Vector,{RecupMasa} from '../data/vector';
-
+import Truncado from '../data/Truncado';
 
 const G_recuperacion=()=>{
 
@@ -54,12 +54,10 @@ document.getElementById('dt114').value,
 document.getElementById('dt214').value,
 document.getElementById('dt314').value,
 document.getElementById('dt414').value,);
-console.log(VAlimentacion);
 const RM = RecupMasa(VAlimentacion,VConcentrado);
-console.log(RM)
-        setdata15((c)=>RM.concComun);
-        setdata16((c)=>RM.alimentacion);
-        setdata17((c)=>RM.recuperacion);
+        setdata15((c)=>Truncado(RM.concComun,3));
+        setdata16((c)=>Truncado(RM.alimentacion,3));
+        setdata17((c)=>Truncado(RM.recuperacion,3));
         setdata18((c)=>dt3);
         setdata19((c)=>dt3);
         setdata20((c)=>dt3);
