@@ -32,22 +32,22 @@ function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
     const MSolido1= calMSolido();
     const Fino1= calFino();
 
-    return  {nombre:nombre1            
-            ,densidad:densidadP1
-            ,porcSolido:porcSolido1
-            ,ley:ley1
-            ,caudalP:caudalP1
-            ,MPulpa:MPulpa1
-            ,MSolido:MSolido1
-            ,Fino:Fino1
+    return  {"nombre":nombre1            
+            ,"densidad":densidadP1
+            ,"porcSolido":porcSolido1
+            ,"ley":ley1
+            ,"caudalP":caudalP1
+            ,"MPulpa":MPulpa1
+            ,"MSolido":MSolido1
+            ,"Fino":Fino1
         }
 }
 
 function Celda(nombre="celda",VEntrada,VConcentrado,VRelave){
-    return {nombre:nombre,
-            VEntrada:VEntrada,
-            VConcentrado:VConcentrado,
-            VRelave:VRelave
+    return {"nombre":nombre,
+            "VEntrada":VEntrada,
+            "VConcentrado":VConcentrado,
+            "VRelave":VRelave
             }
 }
 
@@ -62,9 +62,9 @@ function RecupMasa(listaVAlim,listaVConcentrado){
     const concComun=sumaParam([listaVConcentrado],'MPulpa')
     const alimentacion=sumaParam([listaVAlim],'MPulpa')
     const recuperacion=(concComun/alimentacion)*100
-    return {concComun:concComun,
-            alimentacion:alimentacion,
-            recuperacion:recuperacion
+    return {"concComun":concComun,
+            "alimentacion":alimentacion,
+            "recuperacion":recuperacion
     }
 }
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
@@ -90,10 +90,10 @@ function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
     const recuperacion = ((alimentacion-rechazo)/(concComun-rechazo))*100
 
 
-    return{ concComun:concComun,
-            alimentacion:alimentacion,
-            rechazo:rechazo,
-            recuperacion:recuperacion   
+    return{ "concComun":concComun,
+            "alimentacion":alimentacion,
+            "rechazo":rechazo,
+            "recuperacion":recuperacion   
         }
 }
 export { 
