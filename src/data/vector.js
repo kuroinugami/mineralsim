@@ -56,6 +56,7 @@ const sumaParam=(lista,param)=>{
     const suma= lista.map(vector=> vector[ `${param}` ]).reduce((total,vec)=>total+vec,0);       
     return suma
 }
+
 /*
 function sumaParam(lista,param){
     const suma =lista.map(function(vector){
@@ -81,25 +82,50 @@ function RecupMasa(listaVAlim,listaVConcentrado){
     const alimentacion=sumaParam([listaVAlim],'MPulpa')
     const recuperacion=(concComun/alimentacion)*100
     console.log(concComun,alimentacion,recuperacion)
+    
     return {concComun:concComun,
             alimentacion:alimentacion,
             recuperacion:recuperacion
     }
 }
-/*
+
+
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
+    
+    let concComun=0
+    for (const vector in listaVConcentrado) {
+        concComun+=(vector.MPulpa)*(vector.ley)
+    }
+    concComun/=sumaParam(listaVConcentrado,"MPulpa")
+
+    let alimentacion=0
+    for (const vector in listaVAlim) {
+        alimentacion+=(vector.MPulpa)*(vector.ley)
+    }
+    alimentacion/=sumaParam(listaVAlim,"MPulpa")
+
+    let rechazo=0
+    for (const vector in listaVRelave) {
+        rechazo+=(vector.MPulpa)*(vector.ley)
+    }
+    rechazo/=sumaParam(listaVRelave,"MPulpa")
+
+    const recuperacion = ((alimentacion-rechazo)/(concComun-rechazo))*100
+
+
     return{ concComun:concComun,
-            alimentacion:alimentacion
-            //TO BE CONTINUED    
+            alimentacion:alimentacion,
+            rechazo:rechazo,
+            recuperacion:recuperacion   
         }
 }
-*/
+
 
 
 export { 
-Vector as default,
-Celda,
-sumaParam,
-RecupMasa,
-//RecupLey
+    Vector as default,
+    Celda,
+    sumaParam,
+    RecupMasa,
+    RecupLey
 };
