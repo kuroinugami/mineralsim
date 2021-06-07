@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom';
-import img from '../Recursos/celda.png';
+import img from '../Recursos/img/Celda.png';
 
 //
 
