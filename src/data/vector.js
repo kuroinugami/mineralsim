@@ -22,6 +22,9 @@ function Vector(densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
 
 }
 */
+
+//objeto Vector
+
 function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
     
     const calMPulpa = ()=>(caudalP1*densidadP1)    
@@ -43,6 +46,8 @@ function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
         }
 }
 
+//objeto celda
+
 function Celda(nombre="celda",VEntrada,VConcentrado,VRelave){
     return {"nombre":nombre,
             "VEntrada":VEntrada,
@@ -51,11 +56,15 @@ function Celda(nombre="celda",VEntrada,VConcentrado,VRelave){
             }
 }
 
+//suma de propiedad de array de vectores
+
 const sumaParam=(lista,param)=>{
 
     const suma= lista.map(vector=> vector[ `${param}` ]).reduce((total,vec)=>total+vec,0);       
     return suma
 }
+
+//recuperacion por masa
 
 function RecupMasa(listaVAlim,listaVConcentrado){
     
@@ -67,6 +76,9 @@ function RecupMasa(listaVAlim,listaVConcentrado){
             "recuperacion":recuperacion
     }
 }
+
+//recuperacion por ley
+
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
     
     let concComun=0
@@ -89,17 +101,26 @@ function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
 
     const recuperacion = ((alimentacion-rechazo)/(concComun-rechazo))*100
 
-
     return{ "concComun":concComun,
             "alimentacion":alimentacion,
             "rechazo":rechazo,
             "recuperacion":recuperacion   
         }
 }
+
+//busca objetos dentro de arreglo de objetos, dado un nombre de propiedad y valor de parametro
+
+function filterParam(lista,nomParam,valorParam){
+    return (lista.map(vector=> vector[ `${param}` ]).filter(param=>param==valorParam) )
+}
+
+
+
 export { 
-Vector as default,
-Celda,
-sumaParam,
-RecupMasa,
-RecupLey
+    Vector as default,
+    Celda,
+    sumaParam,
+    RecupMasa,
+    RecupLey,
+    filterParam
 };
