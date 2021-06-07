@@ -7,14 +7,14 @@ const Salida=({num=0})=>{
       }
 */
 if(num==1){return<>
-  <img id='cel1' className='img-thumbnail'src={'https://e7.pngegg.com/pngimages/878/184/png-clipart-circle-point-white-black-m-exquisite-icon-white-monochrome.png'}/>
+  <img  className='cel1 con img-thumbnail'src={'https://e7.pngegg.com/pngimages/878/184/png-clipart-circle-point-white-black-m-exquisite-icon-white-monochrome.png'}/>
   </>
 }
 
 
 
 return<>
-<img id='cel1' className='img-thumbnail'src={'https://icon-library.com/images/half-circle-icon/half-circle-icon-4.jpg'}/>
+<img  className='cel1 con img-thumbnail'src={'https://icon-library.com/images/half-circle-icon/half-circle-icon-4.jpg'}/>
 </>
 }
 

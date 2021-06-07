@@ -1,3 +1,4 @@
+
 /*
 function Vector(densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
 
@@ -52,9 +53,8 @@ function Celda(nombre="celda",VEntrada,VConcentrado,VRelave){
 /*
 const sumaParam=(lista,param)=>{
 
-    const suma= lista.map(vector=> vector[`${param}`]).reduce((total,vec)=>total+vec,0);       
+    const suma= lista.map(vector=> vector[ `${param}` ]).reduce((total,vec)=>total+vec,0);       
     return suma
-
 }
 
 function sumaParam(lista,param){
@@ -74,11 +74,11 @@ function sumaMPulpa(lista){
     return suma
 }
 
-function RecupMasa(listaVAlim,listaVRelave,listaVConcentrado){
-    
 
-    const concComun=sumaMPulpa(listaVConcentrado)
-    const alimentacion=sumaMPulpa(listaVAlim)
+function RecupMasa(listaVAlim,listaVConcentrado){
+    
+    const concComun=sumaMPulpa([listaVConcentrado])
+    const alimentacion=sumaMPulpa([listaVAlim])
     const recuperacion=(concComun/alimentacion)*100
     
     return {concComun:concComun,

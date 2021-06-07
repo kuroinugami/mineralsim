@@ -1,5 +1,6 @@
 import React from 'react';
 import prom from '../data/funtion_dysplay';
+import img from '../Recursos/img/Curvy.png';
 const Up_left=({num})=>{
 
     /*function drag(ev) {
@@ -7,7 +8,7 @@ const Up_left=({num})=>{
       }
 */
 return<>
-<img  id='cel1' className='img-thumbnail'src={'https://s3.amazonaws.com/static.graphemica.com/glyphs/i300s/000/012/558/original/2518-300x300.png?1275331358'}/>
+<img  cl className='cel1 con img-thumbnail t90'src={img}/>
 </>
 }
 

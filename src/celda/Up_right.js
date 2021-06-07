@@ -1,13 +1,14 @@
 import React from 'react';
-import prom from '../data/funtion_dysplay';
-const Up_right=({num})=>{
+
+import img from '../Recursos/img/Curvy.png';
+const Up_right=()=>{
 
     /*function drag(ev) {
         ev.dataTransfer.setData("text", ev.target.id);
       }
 */
 return<>
-<img  id='cel1' className='img-thumbnail'src={'https://es.letrag.com/caracteres/9d2.png'}/>
+<img  cl className='cel1 con img-thumbnail'src={img}/>
 </>
 }
 

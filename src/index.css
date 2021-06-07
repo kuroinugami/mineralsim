@@ -18,13 +18,21 @@ code {
 
   border: 1px solid #aaaaaa;
 }
+.cel1 {
+  width: 60px;
+  height: 60px;
+
+  border: 1px solid #aaaaaa;
+}
+.Arrow{ width: 60px;
+  height: 60px;}
 #celg {
   width: 70px;
   height: 35px;
 
   border: 1px solid #aaaaaa;
 }
-#con{
+.con{
 padding: 0px;
 margin: 0px;
 border: 0px;
@@ -35,3 +43,26 @@ border: 0px;
   border-collapse: collapse;
 }
 
+.t90{
+
+  transform: rotate(-90deg);
+}
+.t180{
+
+  transform: rotate(-180deg);
+}
+.t270{
+
+  transform: rotate(-270deg);
+}
+.centrado{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%,-50%);
+}
+.Marco{
+position: relative;
+display: inline-block;
+text-align: center;
+}

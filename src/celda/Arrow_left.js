@@ -1,13 +1,22 @@
 import React from 'react';
 import prom from '../data/funtion_dysplay';
-const Arrow_left=({num})=>{
+import img from '../Recursos/img/Arrow.png';
+import img2 from '../Recursos/img/Arrow_Left.png';
+import img3 from '../Recursos/img/Arrow_right.png';
+const Arrow_left=({num,type=0})=>{
 
     /*function drag(ev) {
         ev.dataTransfer.setData("text", ev.target.id);
       }
 */
+
+let gmi;
+
+if(type==0){ gmi=img;}
+if(type==1){ gmi=img2;}
+if (type==2){ gmi=img3;}
 return<>
-<button id='cel1' onClick={()=>prom(num)}><img  className='img-thumbnail'src={'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Arrow_left.svg/1024px-Arrow_left.svg.png'}/>
+<button  className='cel1 con' onClick={()=>prom(num)}><img  className='img-thumbnail t90'src={gmi}/>
 </button></>
 }
 

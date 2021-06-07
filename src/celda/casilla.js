@@ -1,5 +1,4 @@
 import React from 'react';
-import {DragDropContext,Droppable,Draggable} from 'react-beautiful-dnd';
 function Box({num}) {
   
   
@@ -8,7 +7,7 @@ function Box({num}) {
 
     return<>
     
-    <div id='cel1' ></div>
+    <div id='cel1 con' ></div>
    
     
     </>
