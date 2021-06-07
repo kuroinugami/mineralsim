@@ -80,7 +80,7 @@ function RecupMasa(...listaVAlim,...listaVConcentrado){
     const concComun=sumaMPulpa(listaVConcentrado)
     const alimentacion=sumaMPulpa(listaVAlim)
     const recuperacion=(concComun/alimentacion)*100
-    
+    console.log(concComun,alimentacion,recuperacion)
     return {concComun:concComun,
             alimentacion:alimentacion,
             recuperacion:recuperacion
@@ -99,7 +99,7 @@ function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
 export { 
 Vector as default,
 Celda,
-sumaParam,
+sumaMPulpa,
 RecupMasa,
 //RecupLey
 };
