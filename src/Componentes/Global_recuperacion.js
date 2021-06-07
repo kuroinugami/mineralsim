@@ -40,20 +40,20 @@ const G_recuperacion=()=>{
         setdata8((c)=>document.getElementById('dt35').innerHTML);
         setdata9((c)=>document.getElementById('dt314').innerHTML);
 const VAlimentacion= Vector('VAlimentacion',
-document.getElementById('dt17').innerHTML,
-document.getElementById('dt27').innerHTML,
-document.getElementById('dt37').innerHTML,
-document.getElementById('dt47').innerHTML,);
+document.getElementById('dt17').value,
+document.getElementById('dt27').value,
+document.getElementById('dt37').value,
+document.getElementById('dt47').value,);
 const VRelave =Vector('VRelave',
-document.getElementById('dt15').innerHTML,
-document.getElementById('dt25').innerHTML,
-document.getElementById('dt35').innerHTML,
-document.getElementById('dt45').innerHTML,);
+document.getElementById('dt15').value,
+document.getElementById('dt25').value,
+document.getElementById('dt35').value,
+document.getElementById('dt45').value,);
 const VConcentrado=Vector('VConcentrado',
-document.getElementById('dt114').innerHTML,
-document.getElementById('dt214').innerHTML,
-document.getElementById('dt314').innerHTML,
-document.getElementById('dt414').innerHTML,);
+document.getElementById('dt114').value,
+document.getElementById('dt214').value,
+document.getElementById('dt314').value,
+document.getElementById('dt414').value,);
 console.log(VAlimentacion);
 const RM = RecupMasa(VAlimentacion,VConcentrado);
 console.log(RM)

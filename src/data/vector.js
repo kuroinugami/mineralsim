@@ -75,7 +75,7 @@ function sumaMPulpa(lista){
 }
 
 
-function RecupMasa(...listaVAlim,...listaVConcentrado){
+function RecupMasa(listaVAlim,listaVConcentrado){
     
     const concComun=sumaMPulpa(listaVConcentrado)
     const alimentacion=sumaMPulpa(listaVAlim)
