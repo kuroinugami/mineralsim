@@ -36,9 +36,9 @@ const G_recuperacion=()=>{
         setdata4((c)=>document.getElementById('MP25').innerHTML);
         setdata5((c)=>document.getElementById('MP114').innerHTML);
         setdata6((c)=>document.getElementById('MP214').innerHTML);
-        setdata7((c)=>document.getElementById('dt37').innerHTML);
-        setdata8((c)=>document.getElementById('dt35').innerHTML);
-        setdata9((c)=>document.getElementById('dt314').innerHTML);
+        setdata7((c)=>document.getElementById('dt37').value);
+        setdata8((c)=>document.getElementById('dt35').value);
+        setdata9((c)=>document.getElementById('dt314').value);
 const VAlimentacion= Vector('VAlimentacion',
 document.getElementById('dt17').value,
 document.getElementById('dt27').value,

@@ -25,8 +25,8 @@ function Vector(densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
 function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
     
     const calMPulpa = ()=>(caudalP1*densidadP1)    
-    const calMSolido = () => (calMPulpa()*porcSolido1)
-    const calFino = () => (ley1*calMSolido()) 
+    const calMSolido = () => (calMPulpa()*porcSolido1/100)
+    const calFino = () => (ley1*calMSolido()/100) 
 
     const MPulpa1= calMPulpa();
     const MSolido1= calMSolido();
@@ -56,31 +56,12 @@ const sumaParam=(lista,param)=>{
     const suma= lista.map(vector=> vector[ `${param}` ]).reduce((total,vec)=>total+vec,0);       
     return suma
 }
-/*
-function sumaParam(lista,param){
-    const suma =lista.map(function(vector){
-        return vector[`${param}`]
-    }).reduce(function(total,vec){
-        return total+vec
-    },0)
-}
-*/
-
-/*function sumaMPulpa(lista){
-    let suma=0
-    for (let i = 0; i < lista.length; i++) {
-        suma+=lista[i].MPulpa
-    }
-    return suma
-}
-*/
 
 function RecupMasa(listaVAlim,listaVConcentrado){
     
     const concComun=sumaParam([listaVConcentrado],'MPulpa')
     const alimentacion=sumaParam([listaVAlim],'MPulpa')
     const recuperacion=(concComun/alimentacion)*100
-    console.log(concComun,alimentacion,recuperacion)
     return {concComun:concComun,
             alimentacion:alimentacion,
             recuperacion:recuperacion
@@ -88,14 +69,20 @@ function RecupMasa(listaVAlim,listaVConcentrado){
 }
 /*
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
+    const concComun=sumaParam([listaVConcentrado],'ley')
+    const alimentacion=sumaParam([listaVAlim],'ley')
+    const recuperacion=(concComun/alimentacion)*100
+    const rechazo
+    
     return{ concComun:concComun,
-            alimentacion:alimentacion
-            //TO BE CONTINUED    
+        alimentacion:alimentacion,
+        rechazo:rechazo,
+        recuperacion:recuperacion  
         }
 }
+
+
 */
-
-
 export { 
 Vector as default,
 Celda,
