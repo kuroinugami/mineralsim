@@ -59,8 +59,8 @@ const sumaParam=(lista,param)=>{
 
 function RecupMasa(listaVAlim,listaVConcentrado){
     
-    const concComun=sumaParam([listaVConcentrado],'MPulpa')
-    const alimentacion=sumaParam([listaVAlim],'MPulpa')
+    const concComun=sumaParam(listaVConcentrado,'MPulpa')
+    const alimentacion=sumaParam(listaVAlim,'MPulpa')
     const recuperacion=(concComun/alimentacion)*100
     return {concComun:concComun,
             alimentacion:alimentacion,
@@ -68,28 +68,28 @@ function RecupMasa(listaVAlim,listaVConcentrado){
     }
 }
 function RecupLey(listaVAlim,listaVRelave,listaVConcentrado){
-    
+    console.log(listaVAlim,listaVRelave,listaVConcentrado)
     let concComun=0
-    for (const vector in listaVConcentrado) {
-        concComun+=(vector.MPulpa)*(vector.ley)
+    for (let i = 0; i < listaVConcentrado.length; i++) {
+        concComun+=(listaVConcentrado[i].MPulpa)*(listaVConcentrado[i].ley)
+        
     }
     concComun/=sumaParam(listaVConcentrado,"MPulpa")
 
     let alimentacion=0
-    for (const vector in listaVAlim) {
-        alimentacion+=(vector.MPulpa)*(vector.ley)
+    for (let i = 0; i < listaVAlim.length; i++) {
+        alimentacion+=(listaVAlim[i].MPulpa)*(listaVAlim[i].ley)
     }
     alimentacion/=sumaParam(listaVAlim,"MPulpa")
-
     let rechazo=0
-    for (const vector in listaVRelave) {
-        rechazo+=(vector.MPulpa)*(vector.ley)
+    for (let i = 0; i < listaVRelave.length; i++) {
+        rechazo+=(listaVRelave[i].MPulpa)*(listaVRelave[i].ley)
     }
     rechazo/=sumaParam(listaVRelave,"MPulpa")
 
     const recuperacion = ((alimentacion-rechazo)/(concComun-rechazo))*100
 
-
+console.log(concComun,alimentacion,rechazo,recuperacion)
     return{ concComun:concComun,
             alimentacion:alimentacion,
             rechazo:rechazo,

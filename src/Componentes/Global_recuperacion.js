@@ -1,5 +1,5 @@
 import React,{useState}  from 'react';
-import  Vector,{RecupMasa} from '../data/vector';
+import  Vector,{RecupMasa,RecupLey} from '../data/vector';
 import Truncado from '../data/Truncado';
 
 const G_recuperacion=()=>{
@@ -39,7 +39,7 @@ const G_recuperacion=()=>{
         setdata7((c)=>document.getElementById('dt37').value);
         setdata8((c)=>document.getElementById('dt35').value);
         setdata9((c)=>document.getElementById('dt314').value);
-const VAlimentacion= Vector('VAlimentacion',
+/*const VAlimentacion= Vector('VAlimentacion',
 document.getElementById('dt17').value,
 document.getElementById('dt27').value,
 document.getElementById('dt37').value,
@@ -53,16 +53,28 @@ const VConcentrado=Vector('VConcentrado',
 document.getElementById('dt114').value,
 document.getElementById('dt214').value,
 document.getElementById('dt314').value,
-document.getElementById('dt414').value,);
-const RM = RecupMasa(VAlimentacion,VConcentrado);
+document.getElementById('dt414').value,);*/
+
+const ListVAlimentacion=[
+JSON.parse(window.sessionStorage.getItem("dtv9")),
+JSON.parse(window.sessionStorage.getItem("dtv1"))];
+const ListVConcentrado=[
+    JSON.parse(window.sessionStorage.getItem("dtv15")),
+    JSON.parse(window.sessionStorage.getItem("dtv12")),
+    JSON.parse(window.sessionStorage.getItem("dtv10")),
+    JSON.parse(window.sessionStorage.getItem("dtv11"))];
+const ListVRelave=[
+        JSON.parse(window.sessionStorage.getItem("dtv5"))];
+console.log(ListVAlimentacion,ListVConcentrado,ListVRelave)
+const RM = RecupMasa(ListVAlimentacion,ListVConcentrado);
         setdata15((c)=>Truncado(RM.concComun,3));
         setdata16((c)=>Truncado(RM.alimentacion,3));
         setdata17((c)=>Truncado(RM.recuperacion,3));
-        setdata18((c)=>dt3);
-        setdata19((c)=>dt3);
-        setdata20((c)=>dt3);
-        setdata21((c)=>dt3);
-        
+const RL = RecupLey(ListVAlimentacion,ListVRelave,ListVConcentrado);
+        setdata18((c)=>Truncado(RL.concComun));
+        setdata19((c)=>Truncado(RL.alimentacion));
+        setdata20((c)=>Truncado(RL.rechazo));
+        setdata21((c)=>Truncado(RL.recuperacion));
         }
 
 
@@ -75,7 +87,7 @@ return <>
 <div className='row'>
 
 <table className=' col-4'  border = "1">
-    <thead><tr><td><strong>Alimentacion</strong></td></tr></thead>
+    <thead><tr><td><p className='textcolor1'><strong>Alimentacion</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data12}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data1}</td></tr>
@@ -84,7 +96,7 @@ return <>
 </tbody>
 </table>
 <table className=' col-4'  border = "1">
-    <thead><tr><td><strong>Relave</strong></td></tr></thead>
+    <thead><tr><td><p className='textcolor2'><strong>Relave</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data14}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data3}</td></tr>
@@ -93,7 +105,7 @@ return <>
 </tbody>
 </table>
 <table className=' col-4'  border = "1">
-    <thead><tr><td><strong>Concentrado</strong></td></tr></thead>
+    <thead><tr><td><p className='textcolor3'><strong>Concentrado</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data13}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data5}</td></tr>

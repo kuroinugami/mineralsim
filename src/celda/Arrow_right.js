@@ -15,7 +15,7 @@ if(type==0){ gmi=img;}
 if(type==1){ gmi=img2;}
 if (type==2){ gmi=img3;}
 return<>
-<button  className='cel1 con' onClick={()=>prom(num)}><img  className='img-thumbnail t270'src={gmi}/>
+<button  className='cel1 con' onClick={()=>prom(num)}><img  className='img-thumbnail t270 'src={gmi}/>
 </button></>
 }
 

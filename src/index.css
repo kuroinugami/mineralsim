@@ -66,3 +66,22 @@ position: relative;
 display: inline-block;
 text-align: center;
 }
+
+.textcolor1{
+color: #FF6600;
+
+}
+.textcolor2{
+  color: #cc9900;
+  
+  }
+  .textcolor3{
+    color: #00cc00;
+    
+    }
+
+.concentrado{
+filter:  invert(0.0) sepia(1) hue-rotate(20deg) saturate(1000%);;
+
+
+}

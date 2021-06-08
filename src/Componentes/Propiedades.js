@@ -19,10 +19,15 @@ const dt4 =document.getElementById('dt4'+num).value;
 setdata2((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido);
 setdata3((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).Fino);
 */
+const vector =Vector('vec'+num,dt1,dt2,dt3,dt4);
+setdata1((c)=>Truncate(vector.MPulpa,3));
+setdata2((c)=>Truncate(vector.MSolido,3));
+setdata3((c)=>Truncate(vector.Fino,3));
 
-setdata1((c)=>Truncate(Vector('vec'+num,dt1,dt2,dt3,dt4).MPulpa,3));
-setdata2((c)=>Truncate(Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido,3));
-setdata3((c)=>Truncate(Vector('vec'+num,dt1,dt2,dt3,dt4).Fino,3));
+window.sessionStorage.setItem("dtv"+num,JSON.stringify(vector));
+
+
+
 }
 
 
