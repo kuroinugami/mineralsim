@@ -1,7 +1,7 @@
 import React,{useState}  from 'react';
 import  Vector,{RecupMasa,RecupLey} from '../data/vector';
 import Truncado from '../data/Truncado';
-import { rm } from 'original-fs';
+
 
 const G_recuperacion=()=>{
 
@@ -90,7 +90,7 @@ const RL = RecupLey(ListVAlimentacion,ListVRelave,ListVConcentrado);
         setdata19((c)=>Truncado(RL.alimentacion));
         setdata20((c)=>Truncado(RL.rechazo));
         setdata21((c)=>Truncado(RL.recuperacion));
-       /*
+       
         setdata22((c)=>data1-(data3+data5));
         setdata23((c)=>data2-(data4+data6));
 const FA =document.getElementById("MP37").innerHTML
@@ -100,8 +100,7 @@ const FC =document.getElementById("MP314").innerHTML
         setdata25((c)=>data22/data1);
         setdata26((c)=>data23/data2);
         setdata27((c)=>data24/FA);
-*/
-    
+
 
 
 
