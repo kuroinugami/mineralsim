@@ -148,6 +148,6 @@ function tablaBalance(listaVectores) {
 }
 
 */
-export default tablaVector
+export default TableVector
     
 

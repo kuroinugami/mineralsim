@@ -8,7 +8,7 @@ const Omega=()=>{
       }
 */
 return<>
-<img className='cel1 con img-thumbnail'src={img}/>
+<img className='cel1 con 'src={img}/>
 </>
 }
 

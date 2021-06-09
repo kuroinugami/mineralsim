@@ -7,7 +7,7 @@ const Line_Horizon=()=>{
       }
 */
 return<>
-<img  cl className='cel1 con img-thumbnail t90'src={img}/>
+<img  cl className='cel1 con t90'src={img}/>
 </>
 }
 

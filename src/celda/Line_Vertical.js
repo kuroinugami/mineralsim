@@ -7,7 +7,7 @@ const Line_Vertical=()=>{
       }
 */
 return<>
-<img  cl className='cel1 con img-thumbnail'src={img}/>
+<img  cl className='cel1 con 'src={img}/>
 </>
 }
 

@@ -9,10 +9,24 @@ const Panel=({num})=>{
     const [data2,setdata2]=useState(0);
     const [data3,setdata3]=useState(0);
 
-
-
+    /*const vector = window.sessionStorage.getItem("dtv"+num)
+    if(vector!=null){
+    
+    
+     document.getElementById('dt1'+num).value=vector.densidad;
+     document.getElementById('dt2'+num).value=vector.porcSolido;
+     document.getElementById('dt3'+num).value=vector.ley;
+     document.getElementById('dt4'+num).value=vector.caudalP;
+      setdata1((c)=>Truncate(vector.MPulpa,3));
+      setdata2((c)=>Truncate(vector.MSolido,3));
+      setdata3((c)=>Truncate(vector.Fino,3));
+    
+    }
+*/
 const calcular=()=>{
-const dt1 =document.getElementById('dt1'+num).value;
+
+
+  const dt1 =document.getElementById('dt1'+num).value;
 const dt2 =document.getElementById('dt2'+num).value;
 const dt3 =document.getElementById('dt3'+num).value;
 const dt4 =document.getElementById('dt4'+num).value;
@@ -20,6 +34,11 @@ const dt4 =document.getElementById('dt4'+num).value;
 setdata2((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido);
 setdata3((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).Fino);
 */
+
+
+
+
+
 const vector =Vector('vec'+num,dt1,dt2,dt3,dt4);
 
 setdata1((c)=>Truncate(vector.MPulpa,3));

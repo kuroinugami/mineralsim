@@ -19,6 +19,7 @@ import Nodos from './celda/Nodos';
 import Salida from './celda/Salida';
 import Propiedades from './Componentes/Propiedades';
 import G_recuperacion from './Componentes/Global_recuperacion';
+import table from './data/tabla'
 import prom from './data/funtion_dysplay';
 //import ViewR from './data/tabla';
 const Main= ()=>{
