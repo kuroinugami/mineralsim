@@ -1,7 +1,18 @@
 
-const data = [0,0,0,0];
-
-module.exports=data;
 
 
 
+
+
+
+
+
+const Buscarv=()=>{
+const list=[]
+for(let i=0;i<16;i++){
+list[i]=window.sessionStorage.getItem("dtv"+i)
+}
+return list
+}
+
+export default Buscarv;
