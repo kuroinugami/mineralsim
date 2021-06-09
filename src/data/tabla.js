@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import DataTable from 'react-data-table-component'
 
 
-const vectores=[{"nombre":"vector1"            
+const vectores=[{"nombre":"C R1"            
 ,"densidad":123
 ,"porcSolido":1
 ,"ley":1
@@ -14,7 +14,7 @@ const vectores=[{"nombre":"vector1"
 ,"Fino":5
 ,"tipo":"tipo1"
 },
-{"nombre":"vector2"           
+{"nombre":"R R1"           
 ,"densidad":123
 ,"porcSolido":1
 ,"ley":2
@@ -64,9 +64,6 @@ const concentrado=
 
 const balanceS=[alimentacion,relave,concentrado]
 
-
-
-const columnas 
 
 const columnasV=[
     {
@@ -236,7 +233,7 @@ function TableBalanceS(params) {
         </div>
     )
 }
-
+/*
 function diferncia(params) {
     return(
         <div className="table-responsive">
@@ -253,7 +250,7 @@ function diferncia(params) {
 
 
 
-
+*/
 
 /*
 
@@ -310,6 +307,10 @@ function tablaBalance(listaVectores) {
 }
 
 */
-export default TablaVector
-    
+export {
+TableVector as default,
+TableBalanceS,
+TableRecupL,
+TableRecupM
+}  
 

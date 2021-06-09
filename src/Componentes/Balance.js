@@ -22,9 +22,7 @@ const [data6, setdata6] = useState(0);
 <tr><td>MS</td><td>{data2}</td><td>{data5}</td></tr>
 <tr><td>MF</td><td>{data3}</td><td>{data6}</td></tr>
 </tbody>
-
-
-        </table>
+</table>
     
     
     </>
