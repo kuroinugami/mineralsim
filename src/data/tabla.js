@@ -30,8 +30,8 @@ function tablaVector(...listaVector){
                 <th>Masa pulpa(ton/hr)</th>
                 <th>Masa solido(ton/hr)</th>
                 <th>Fino(ton/hr)</th>
-                for (let i = 0; i < listaVector.length; i++) {
-                    viewVector(listaVector[i])
+                for (const vector in listaVector) {
+                    viewVector(listaVector)
                 }
             </thead>
             
