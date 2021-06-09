@@ -237,7 +237,7 @@ function TableBalanceS(params) {
     )
 }
 
-function (params) {
+function diferncia(params) {
     return(
         <div className="table-responsive">
             <DataTable 

@@ -7,7 +7,7 @@ const Down_left=({num})=>{
       }
 */
 return<>
-<img  cl className='cel1 con img-thumbnail t180'src={img}/>
+<img  cl className='cel1 con  t180'src={img}/>
 </>
 }
 

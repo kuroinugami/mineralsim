@@ -8,7 +8,7 @@ const Down_right=({num})=>{
       }
 */
 return<>
-<img  cl className='cel1 con img-thumbnail t270'src={img}/>
+<img  cl className='cel1 con  t270'src={img}/>
 </>
 }
 

@@ -86,7 +86,7 @@ ReactDOM.render(panel,
 
 
 
-return <> <div className='Marco'><img className='cel1 con img-thumbnail' src={img}/><div className='centrado'>{text}</div></div> </>
+return <> <div className='Marco'><img className='cel1 con ' src={img}/><div className='centrado'>{text}</div></div> </>
 
 
 }

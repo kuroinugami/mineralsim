@@ -10,7 +10,10 @@ if(num=='g'){
     document.getElementById(`ditg`).style.display='block';
     
 }else{ document.getElementById(`ditg`).style.display='none';}
-
+if(num=='R'){
+    document.getElementById(`ditR`).style.display='block';
+    
+}else{ document.getElementById(`ditR`).style.display='none';}
 
 }
 export default propi;

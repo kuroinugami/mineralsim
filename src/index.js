@@ -19,6 +19,7 @@ import Nodos from './celda/Nodos';
 import Salida from './celda/Salida';
 import Propiedades from './Componentes/Propiedades';
 import G_recuperacion from './Componentes/Global_recuperacion';
+import table from './data/tabla'
 import prom from './data/funtion_dysplay';
 //import ViewR from './data/tabla';
 const Main= ()=>{
@@ -44,12 +45,19 @@ const Main= ()=>{
 
   </>
 }
-//<div className='col'><button onClick={()=>cargarView()} >Visualizar Reporte</button></div>
+
+
 const Propi=()=>{
 return<>
 <div className='row'>
 <div className='col'><button onClick={()=>prom('g')} >Balance de Solido</button></div>
-
+<div className='col'><button onClick={()=>prom('R')(
+  
+  ReactDOM.render(table(),
+  document.getElementById('ditR')
+))
+} >Visualizar Reporte</button>
+</div>
 </div>
 <div className='row'>
 <div className='col-10' id='con'>
@@ -70,7 +78,7 @@ return<>
 <div id='dit14' style={{display: 'none'}}><Propiedades num='14'/></div>
 <div id='dit15' style={{display: 'none'}}><Propiedades num='15'/></div>
 <div id='ditg' style={{display: 'none'}}><G_recuperacion/></div>
-<div id='ditR' style={{display: 'none'}}>{}</div>
+<div id='ditR' style={{display: 'none'}} >{}</div>
 </div>
 </div>
 </>
@@ -96,7 +104,6 @@ const list =()=>{
   }
 return list;
 }
-
 
 
 
