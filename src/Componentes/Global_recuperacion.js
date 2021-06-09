@@ -14,6 +14,12 @@ const G_recuperacion=()=>{
     const [data19,setdata19]=useState(0);
     const [data20,setdata20]=useState(0);
     const [data21,setdata21]=useState(0);
+    const [data22,setdata22]=useState(0);
+    const [data23,setdata23]=useState(0);
+    const [data24,setdata24]=useState(0);
+    const [data25,setdata25]=useState(0);
+    const [data26,setdata26]=useState(0);
+    const [data27,setdata27]=useState(0);
     const [data1,setdata1]=useState(0);
     const [data2,setdata2]=useState(0);
     const [data3,setdata3]=useState(0);
@@ -54,7 +60,15 @@ document.getElementById('dt114').value,
 document.getElementById('dt214').value,
 document.getElementById('dt314').value,
 document.getElementById('dt414').value,);*/
-
+const ali=window.sessionStorage.getItem("dtv7");
+const rec=window.sessionStorage.getItem("dtv5")
+const com=window.sessionStorage.getItem("dtv14")
+setdata22(()=>(ali.MPulpa-(rec.MPulpa+com.MPulpa)));
+setdata23(()=>(ali.MSolido-(rec.MSolido+com.MSolido)));
+setdata24(()=>(ali.Fino-(rec.Fino+com.Fino)));
+setdata25(()=>((ali.MPulpa-(rec.MPulpa+com.MPulpa))/ali.MPulpa));
+setdata26(()=>((ali.MSolido-(rec.MSolido+com.MSolido))/ali.MSolido));
+setdata27(()=>((ali.Fino-(rec.Fino+com.Fino))/ali.Fino));
 const ListVAlimentacion=[
 JSON.parse(window.sessionStorage.getItem("dtv9")),
 JSON.parse(window.sessionStorage.getItem("dtv1"))];
@@ -75,7 +89,9 @@ const RL = RecupLey(ListVAlimentacion,ListVRelave,ListVConcentrado);
         setdata19((c)=>Truncado(RL.alimentacion));
         setdata20((c)=>Truncado(RL.rechazo));
         setdata21((c)=>Truncado(RL.recuperacion));
-        }
+        
+
+    }
 
 
 
@@ -86,7 +102,7 @@ return <>
     
 <div className='row'>
 
-<table className=' col-4'  border = "1">
+<table className=' col-3'  border = "1">
     <thead><tr><td><p className='textcolor1'><strong>Alimentación</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data12}</td></tr>
@@ -95,7 +111,7 @@ return <>
 <tr><td>Ley(%)</td><td>{data7}</td></tr>
 </tbody>
 </table>
-<table className=' col-4'  border = "1">
+<table className=' col-3'  border = "1">
     <thead><tr><td><p className='textcolor2'><strong>Relave</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data14}</td></tr>
@@ -104,13 +120,22 @@ return <>
 <tr><td>Ley(%)</td><td>{data8}</td></tr>
 </tbody>
 </table>
-<table className=' col-4'  border = "1">
+<table className=' col-3'  border = "1">
     <thead><tr><td><p className='textcolor3'><strong>Concentrado</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data13}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data5}</td></tr>
 <tr><td>Masa solido(T/h)</td><td>{data6}</td></tr>
 <tr><td>Ley(%)</td><td>{data9}</td></tr>
+</tbody>
+</table>
+<table className=' col-3'  border = "1">
+    <thead><tr><th colSpan = {"3"} ><p align='center'>Diferencia</p></th><th><p align='right'>%Error</p></th></tr></thead>
+    <tbody>
+<tr><td colSpan = {"2"}>Masa pulpa(T/h)</td><td>{data22}</td><td align='right'>{data25}</td></tr>
+<tr><td colSpan = {"2"}>Masa solido(T/h)</td><td>{data23}</td><td align='right'>{data26}</td></tr>
+<tr><td colSpan = {"2"}>Masa Fino(T/h)</td><td>{data24}</td><td align='right'>{data27}</td></tr>
+<tr><td colSpan = {"2"}></td><td>-</td><td align='right'>-</td></tr>
 </tbody>
 </table>
 </div>
