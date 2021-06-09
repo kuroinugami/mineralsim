@@ -22,7 +22,7 @@ function Vector(densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
 
 }
 */
-function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
+function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0,tipo=""){
     
     const calMPulpa = ()=>(caudalP1*densidadP1)    
     const calMSolido = () => (calMPulpa()*porcSolido1/100)
@@ -40,6 +40,7 @@ function Vector(nombre1="nn",densidadP1=0,porcSolido1=0,ley1=0,caudalP1=0){
             ,MPulpa:MPulpa1
             ,MSolido:MSolido1
             ,Fino:Fino1
+            ,tipo:tipo
         }
 }
 
@@ -96,6 +97,14 @@ console.log(concComun,alimentacion,rechazo,recuperacion)
             recuperacion:recuperacion   
         }
 }
+
+function findVector(id,listado){ 
+    const lista=listado.filter(vector=>vector.tipo==id)
+    return lista
+}
+
+
+
 export { 
 Vector as default,
 Celda,
