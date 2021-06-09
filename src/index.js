@@ -45,17 +45,19 @@ const Main= ()=>{
 
   </>
 }
+const aux=()=>{
 
+  prom('R')
+    ReactDOM.render(table(),
+    document.getElementById('ditR'))
+  
+}
 
 const Propi=()=>{
 return<>
 <div className='row'>
 <div className='col'><button onClick={()=>prom('g')} >Balance de Solido</button></div>
-<div className='col'><button onClick={()=>prom('R')(
-  
-  ReactDOM.render(table(),
-  document.getElementById('ditR')
-))
+<div className='col'><button onClick={()=>aux()
 } >Visualizar Reporte</button>
 </div>
 </div>
