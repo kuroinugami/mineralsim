@@ -87,7 +87,7 @@ return <>
 <div className='row'>
 
 <table className=' col-4'  border = "1">
-    <thead><tr><td><p className='textcolor1'><strong>Alimentacion</strong></p></td></tr></thead>
+    <thead><tr><td><p className='textcolor1'><strong>Alimentación</strong></p></td></tr></thead>
     <tbody>
 <tr><td>Solido(%)</td><td>{data12}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data1}</td></tr>
@@ -117,25 +117,25 @@ return <>
 <div className='row'>
 <table border = "1">
 <thead>
-    <tr><td  colSpan = {"2"} ><strong>Recuperacion masica</strong></td></tr>
+    <tr><td  colSpan = {"2"} ><strong>Recuperación másica</strong></td></tr>
 </thead>
 <tbody>
-<tr><td>Concentrado comun</td><td>{data15}</td></tr>
-<tr><td>Alimentacion</td><td>{data16}</td></tr>
-<tr><td>Recuperacion</td><td>{data17}</td></tr>
+<tr><td>Concentrado común(T/h)</td><td>{data15}</td></tr>
+<tr><td>Alimentación(T/h)</td><td>{data16}</td></tr>
+<tr><td>Recuperación(T/h)</td><td>{data17}</td></tr>
     </tbody>
 </table>
 </div>
 <div className='row'>
 <table border = "1">
 <thead>
-    <tr><td  colSpan = {"2"} ><strong>Recuperacion por leyes</strong></td></tr>
+    <tr><td  colSpan = {"2"} ><strong>Recuperación por leyes</strong></td></tr>
 </thead>
 <tbody>
-<tr><td>Concentrado comun</td><td>{data18}</td></tr>
-<tr><td>Alimentacion</td><td>{data19}</td></tr>
-<tr><td>Rechazo</td><td>{data20}</td></tr>
-<tr><td>Recuperacion</td><td>{data21}</td></tr>
+<tr><td>Concentrado común(%)</td><td>{data18}</td></tr>
+<tr><td>Alimentación(%)</td><td>{data19}</td></tr>
+<tr><td>Rechazo(%)</td><td>{data20}</td></tr>
+<tr><td>Recuperación(%)</td><td>{data21}</td></tr>
     </tbody>
 </table>
 </div>
