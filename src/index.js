@@ -20,6 +20,7 @@ import Salida from './celda/Salida';
 import Propiedades from './Componentes/Propiedades';
 import G_recuperacion from './Componentes/Global_recuperacion';
 import prom from './data/funtion_dysplay';
+//import ViewR from './data/tabla';
 const Main= ()=>{
 
   return<>
@@ -43,11 +44,12 @@ const Main= ()=>{
 
   </>
 }
-
+//<div className='col'><button onClick={()=>cargarView()} >Visualizar Reporte</button></div>
 const Propi=()=>{
 return<>
 <div className='row'>
 <div className='col'><button onClick={()=>prom('g')} >Balance de Solido</button></div>
+
 </div>
 <div className='row'>
 <div className='col-10' id='con'>
@@ -68,12 +70,33 @@ return<>
 <div id='dit14' style={{display: 'none'}}><Propiedades num='14'/></div>
 <div id='dit15' style={{display: 'none'}}><Propiedades num='15'/></div>
 <div id='ditg' style={{display: 'none'}}><G_recuperacion/></div>
+<div id='ditR' style={{display: 'none'}}>{}</div>
 </div>
 </div>
 </>
 
 
 }
+/*
+const cargarView =()=>{
+
+
+  ReactDOM.render(ViewR(list()),
+    document.getElementById('ditR')
+  );
+  
+
+}
+*/
+const list =()=>{
+  const List=[]
+  for (let index = 0; index < 16; index++) {
+    
+    list[index]=JSON.parse(window.sessionStorage.getItem("dtv"+index));
+  }
+return list;
+}
+
 
 
 
@@ -142,4 +165,3 @@ const Tool =()=>{
 ReactDOM.render(<Tool/>,
   document.getElementById('tool')
 );
-

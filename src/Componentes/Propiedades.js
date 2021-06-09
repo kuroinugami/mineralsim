@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import Vector from '../data/vector';
 import Truncate from '../data/Truncado';
+import Homologo,{CColor} from '../data/Homologos';
 const Panel=({num})=>{
     
  
@@ -20,15 +21,26 @@ setdata2((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).MSolido);
 setdata3((c)=>Vector('vec'+num,dt1,dt2,dt3,dt4).Fino);
 */
 const vector =Vector('vec'+num,dt1,dt2,dt3,dt4);
-console.log(vector)
+
 setdata1((c)=>Truncate(vector.MPulpa,3));
 setdata2((c)=>Truncate(vector.MSolido,3));
 setdata3((c)=>Truncate(vector.Fino,3));
 
 window.sessionStorage.setItem("dtv"+num,JSON.stringify(vector));
+if(Homologo(num)!=null){
+const dtley =document.getElementById(('dt3'+Homologo(num))).value;
+if(dtley!=0){
+    
+  if(dtley<dt3){
+    CColor(num,1);
+    CColor(Homologo(num),2);}
+  else{ 
+    CColor(Homologo(num),1);
+    CColor(num,2);}
 
 
-
+}
+}
 }
 
 
