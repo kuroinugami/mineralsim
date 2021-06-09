@@ -59,8 +59,8 @@ const sumaParam=(lista,param)=>{
 
 function RecupMasa(listaVAlim,listaVConcentrado){
     
-    const concComun=sumaParam(listaVConcentrado,'MPulpa')
-    const alimentacion=sumaParam(listaVAlim,'MPulpa')
+    const concComun=sumaParam(listaVConcentrado,'MSolido')
+    const alimentacion=sumaParam(listaVAlim,'MSolido')
     const recuperacion=(concComun/alimentacion)*100
     return {concComun:concComun,
             alimentacion:alimentacion,
