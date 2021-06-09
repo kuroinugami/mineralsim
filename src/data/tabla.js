@@ -233,6 +233,7 @@ function TableBalanceS(params) {
         </div>
     )
 }
+//tabla diferencia por hacer
 
 function diferencia(params) {
     return(
