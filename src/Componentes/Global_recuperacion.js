@@ -1,6 +1,10 @@
 import React,{useState}  from 'react';
 import  Vector,{RecupMasa,RecupLey} from '../data/vector';
 import Truncado from '../data/Truncado';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9e77d18cf387f9e2d2f6ae520ca17d052d05524b
 
 const G_recuperacion=()=>{
 
@@ -89,7 +93,24 @@ const RL = RecupLey(ListVAlimentacion,ListVRelave,ListVConcentrado);
         setdata19((c)=>Truncado(RL.alimentacion));
         setdata20((c)=>Truncado(RL.rechazo));
         setdata21((c)=>Truncado(RL.recuperacion));
+<<<<<<< HEAD
         
+=======
+       
+        setdata22((c)=>data1-(data3+data5));
+        setdata23((c)=>data2-(data4+data6));
+const FA =document.getElementById("MP37").innerHTML
+const FR =document.getElementById("MP35").innerHTML
+const FC =document.getElementById("MP314").innerHTML
+        setdata24((c)=>FA-(FR+FC));
+        setdata25((c)=>data22/data1);
+        setdata26((c)=>data23/data2);
+        setdata27((c)=>data24/FA);
+
+
+
+
+>>>>>>> 9e77d18cf387f9e2d2f6ae520ca17d052d05524b
 
     }
 
