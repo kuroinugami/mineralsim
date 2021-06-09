@@ -25,7 +25,50 @@ const vectores=[{"nombre":"vector1"
 ,"tipo":"tipo1"
 }]
 
-const columnas=[
+const recuperacionM=[
+    {   concComun:116.789,
+        alimentacion:184.029,
+        recuperacion:63.46
+    }
+]
+const recuperacionL=[
+    {   concComun:76.32,
+        alimentacion:65.559,
+        rechazo:47,
+        recuperacion:63.299   
+    }
+]
+const alimentacion=
+    {   nombre:'alimentacion'        
+        ,porcSolido:20.03
+        ,ley:65.45
+        ,MPulpa:918.788
+        ,MSolido:184.033
+    }
+
+const relave=
+    {   nombre:'relave'        
+        ,porcSolido:34.57
+        ,ley:47
+        ,MPulpa:194.509
+        ,MSolido:67.241
+    }
+
+const concentrado=
+    {   nombre:'concentrado'        
+        ,porcSolido:16.12
+        ,ley:76.22
+        ,MPulpa:724.353
+        ,MSolido:116.765
+    }
+
+const balanceS=[alimentacion,relave,concentrado]
+
+
+
+const columnas 
+
+const columnasV=[
     {
         name: 'ID',
         selector: 'nombre',
@@ -68,6 +111,67 @@ const columnas=[
     }
 ]
 
+const columnasRecuM=[
+    {
+        name: 'Concentrado común(ton/hr)',
+        selector: 'concComun',
+        sortable: 'false'
+    },
+    {
+        name: 'Alimentación(ton/hr)',
+        selector: 'alimentacion',
+        sortable: 'false'
+    },
+    {
+        name: 'Recuperacion',
+        selector: 'recuperacion',
+        sortable: 'false'
+    }
+]
+
+const columnasRecuL=[
+    {
+        name: 'Concentrado común(%)',
+        selector: 'concComun',
+        sortable: 'false'
+    },
+    {
+        name: 'Alimentación(%)',
+        selector: 'alimentacion',
+        sortable: 'false'
+    },{
+        name:'Rechazo(%)',
+        selector: 'rechazo' ,
+        sortable: 'false'
+    },
+    {
+        name: 'Recuperacion(%)',
+        selector: 'recuperacion',
+        sortable: 'true'
+    }
+]
+const columnasBalanceS=[
+    {
+        name: 'Sólido(%)',
+        selector: 'porcSolido',
+        sortable: 'true'
+    },
+    {
+        name: 'Masa Pulpa(ton/hr)',
+        selector: 'MPulpa',
+        sortable: 'true',
+    },
+    {
+        name: 'Masa Sólido(ton/hr)',
+        selector: 'MSolido',
+        sortable: 'true'
+    },
+    {
+        name: 'Ley(%)',
+        selector: 'ley',
+        sortable: 'true'
+    }
+]
 const paginacionOpciones={
     rowsPerPageText: 'Filas por página',
     rangeSeparatorText: 'de',
@@ -78,8 +182,8 @@ const paginacionOpciones={
 function TableVector(){
     return(
         <div className="table-responsive">
-            <DataTable 
-                columns={columnas}
+            <DataTable                 
+                columns={columnasV}
                 data={vectores}
                 title="Flujos ingresados"
                 pagination
@@ -90,6 +194,64 @@ function TableVector(){
         </div>
     )
 }
+
+function TableRecupM(){
+    return(
+        <div className="table-responsive">
+            <DataTable 
+                columns={columnasRecuM}
+                data={recuperacionM}
+                title="Recuperación por Masa"
+                fixedHeader
+                fixedHeaderScrollHeight="600px"
+            />
+        </div>
+    )
+}
+
+function TableRecupL(){
+    return(
+        <div className="table-responsive">
+            <DataTable 
+                columns={columnasRecuL}
+                data={recuperacionL}
+                title="Recuperación por leyes"
+                fixedHeader
+                fixedHeaderScrollHeight="600px"
+            />
+        </div>
+    )
+}
+
+function TableBalanceS(params) {
+    return(
+        <div className="table-responsive">
+            <DataTable 
+                columns={columnasBalanceS}
+                data={balanceS}
+                title="Recuperación por leyes"
+                fixedHeader
+                fixedHeaderScrollHeight="600px"
+            />
+        </div>
+    )
+}
+
+function (params) {
+    return(
+        <div className="table-responsive">
+            <DataTable 
+                columns={columnasDifM}
+                data={difM}
+                title="diferencia"
+                fixedHeader
+                fixedHeaderScrollHeight="600px"
+            />
+        </div>
+    )
+}
+
+
 
 
 
@@ -148,6 +310,6 @@ function tablaBalance(listaVectores) {
 }
 
 */
-export default tablaVector
+export default TablaVector
     
 
