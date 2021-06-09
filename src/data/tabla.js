@@ -31,9 +31,9 @@ function tablaVector(...listaVector){
                 <th>Masa solido(ton/hr)</th>
                 <th>Fino(ton/hr)</th>
                 <script>
-                for (const vector in listaVector) {
-                    viewVector(vector)
-                }
+                    for (const vector in listaVector) {
+                        viewVector(vector)
+                    }
                 </script>
             </thead>
             
@@ -41,3 +41,9 @@ function tablaVector(...listaVector){
         </>
     )
 }
+/*
+function tablaBalance(listaVectores) {
+    
+}
+
+*/
