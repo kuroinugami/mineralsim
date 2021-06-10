@@ -1,10 +1,6 @@
 import React,{useState}  from 'react';
 import  Vector,{RecupMasa,RecupLey} from '../data/vector';
 import Truncado from '../data/Truncado';
-<<<<<<< HEAD
-=======
-
->>>>>>> 9e77d18cf387f9e2d2f6ae520ca17d052d05524b
 
 const G_recuperacion=()=>{
 
@@ -93,24 +89,22 @@ const RL = RecupLey(ListVAlimentacion,ListVRelave,ListVConcentrado);
         setdata19((c)=>Truncado(RL.alimentacion));
         setdata20((c)=>Truncado(RL.rechazo));
         setdata21((c)=>Truncado(RL.recuperacion));
-<<<<<<< HEAD
-        
-=======
-       
-        setdata22((c)=>data1-(data3+data5));
-        setdata23((c)=>data2-(data4+data6));
+  
+
+
+        setdata22((c)=>(Truncado((+data1)+(-data3)+(-data5))));
+        setdata23((c)=>Truncado((+data2)+(-data4)+(-data6)));
 const FA =document.getElementById("MP37").innerHTML
 const FR =document.getElementById("MP35").innerHTML
 const FC =document.getElementById("MP314").innerHTML
-        setdata24((c)=>FA-(FR+FC));
-        setdata25((c)=>data22/data1);
-        setdata26((c)=>data23/data2);
-        setdata27((c)=>data24/FA);
+        setdata24((c)=>Truncado((+FA)+(-FR)+(-FC)));
+        setdata25((c)=>Truncado(Math.abs(((+data22)/(+data1))*100)));
+        setdata26((c)=>Truncado(Math.abs(((+data23)/(+data2))*100)));
+        setdata27((c)=>Truncado(Math.abs(((+data24)/(+FA))*100)));
 
 
 
 
->>>>>>> 9e77d18cf387f9e2d2f6ae520ca17d052d05524b
 
     }
 
@@ -124,9 +118,11 @@ return <>
 <div className='row'>
 
 <table className=' col-3'  border = "1">
-    <thead><tr><td><p className='textcolor1'><strong>Alimentación</strong></p></td></tr></thead>
+    <thead><tr><td><p className='textcolor1'><strong>Alimentación</strong></p></td></tr
+    
+    ></thead>
     <tbody>
-<tr><td>Solido(%)</td><td>{data12}</td></tr>
+<tr><td>Sólido(%)</td><td>{data12}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data1}</td></tr>
 <tr><td>Masa solido(T/h)</td><td>{data2}</td></tr>
 <tr><td>Ley(%)</td><td>{data7}</td></tr>
@@ -135,7 +131,7 @@ return <>
 <table className=' col-3'  border = "1">
     <thead><tr><td><p className='textcolor2'><strong>Relave</strong></p></td></tr></thead>
     <tbody>
-<tr><td>Solido(%)</td><td>{data14}</td></tr>
+<tr><td>Sólido(%)</td><td>{data14}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data3}</td></tr>
 <tr><td>Masa solido(T/h)</td><td>{data4}</td></tr>
 <tr><td>Ley(%)</td><td>{data8}</td></tr>
@@ -144,18 +140,18 @@ return <>
 <table className=' col-3'  border = "1">
     <thead><tr><td><p className='textcolor3'><strong>Concentrado</strong></p></td></tr></thead>
     <tbody>
-<tr><td>Solido(%)</td><td>{data13}</td></tr>
+<tr><td>Sólido(%)</td><td>{data13}</td></tr>
 <tr><td>Masa pulpa(T/h)</td><td>{data5}</td></tr>
 <tr><td>Masa solido(T/h)</td><td>{data6}</td></tr>
 <tr><td>Ley(%)</td><td>{data9}</td></tr>
 </tbody>
 </table>
 <table className=' col-3'  border = "1">
-    <thead><tr><th colSpan = {"3"} ><p align='center'>Diferencia</p></th><th><p align='right'>%Error</p></th></tr></thead>
+    <thead><tr><th colSpan = {"3"} ><p align='center'>Diferencia(T/h)</p></th><th><p align='right'>%Error</p></th></tr></thead>
     <tbody>
-<tr><td colSpan = {"2"}>Masa pulpa(T/h)</td><td>{data22}</td><td align='right'>{data25}</td></tr>
-<tr><td colSpan = {"2"}>Masa solido(T/h)</td><td>{data23}</td><td align='right'>{data26}</td></tr>
-<tr><td colSpan = {"2"}>Masa Fino(T/h)</td><td>{data24}</td><td align='right'>{data27}</td></tr>
+<tr><td colSpan = {"2"}>Masa pulpa</td><td>{data22}</td><td align='right'>{data25}</td></tr>
+<tr><td colSpan = {"2"}>Masa solido</td><td>{data23}</td><td align='right'>{data26}</td></tr>
+<tr><td colSpan = {"2"}>Masa Fino</td><td>{data24}</td><td align='right'>{data27}</td></tr>
 <tr><td colSpan = {"2"}></td><td>-</td><td align='right'>-</td></tr>
 </tbody>
 </table>
