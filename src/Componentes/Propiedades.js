@@ -71,7 +71,7 @@ const main=<>
 <table className='col-6'  border = "1">
     <tbody>
 <tr><td>Densidad(T/m3)</td><td><input type='text' id= {'dt1'+num} defaultValue= '0'/></td></tr>
-<tr><td>Solido(%)</td><td><input type='text'id={'dt2'+num}defaultValue= '0'/></td></tr>
+<tr><td>Sólido(%)</td><td><input type='text'id={'dt2'+num}defaultValue= '0'/></td></tr>
 <tr><td>Ley(%)</td><td><input type='text'id={'dt3'+num}defaultValue= '0'/></td></tr>
 <tr><td>Caudal(m3/h)</td><td><input type='text'id={'dt4'+num}defaultValue= '0'/></td></tr>
 </tbody>

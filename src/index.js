@@ -56,7 +56,7 @@ const aux=()=>{
 const Propi=()=>{
 return<>
 <div className='row'>
-<div className='col'><button onClick={()=>prom('g')} >Balance de Solido</button></div>
+<div className='col'><button onClick={()=>prom('g')} >Balance de Sólido</button></div>
 <div className='col'><button onClick={()=>aux()
 } >Visualizar Reporte</button>
 </div>
