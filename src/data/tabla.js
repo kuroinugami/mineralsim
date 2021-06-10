@@ -64,6 +64,23 @@ const concentrado=
 
 const balanceS=[alimentacion,relave,concentrado]
 
+const error=[
+    {
+        id: "Masa Pulpa(t/h)",
+        diferencia: -0.73,
+        porcError: 0.007 
+    },
+    {
+        id: "Masa sólido(t/h)",
+        diferencia: -0.26,
+        porcError: 0.14 
+    },
+    {
+        id: "Masa Fino(t/h)",
+        diferencia: 0.13,
+        porcError: 0.01 
+    }
+]
 
 const columnasV=[
     {
@@ -169,6 +186,25 @@ const columnasBalanceS=[
         sortable: 'true'
     }
 ]
+
+const columnasError=[
+    {
+        name: 'ID',
+        selector: 'id',
+        sortable: 'false'
+    },
+    {
+        name: 'Diferencia(T/h)',
+        selector: 'diferencia',
+        sortable: 'true'
+    },
+    {
+        name: 'Porcentaje de error',
+        selector: 'porcError',
+        sortable: 'true'
+    }
+]
+
 const paginacionOpciones={
     rowsPerPageText: 'Filas por página',
     rangeSeparatorText: 'de',
@@ -220,7 +256,7 @@ function TableRecupL(){
     )
 }
 
-function TableBalanceS(params) {
+function TableBalanceS() {
     return(
         <div className="table-responsive">
             <DataTable 
@@ -235,13 +271,13 @@ function TableBalanceS(params) {
 }
 //tabla diferencia por hacer
 
-function diferencia(params) {
+function TableError() {
     return(
         <div className="table-responsive">
             <DataTable 
-                columns={columnasDifM}
-                data={difM}
-                title="diferencia"
+                columns={columnasError}
+                data={error}
+                title="Error"
                 fixedHeader
                 fixedHeaderScrollHeight="600px"
             />
@@ -312,6 +348,7 @@ export {
 TableVector as default,
 TableBalanceS,
 TableRecupL,
-TableRecupM
+TableRecupM,
+TableError
 }  
 
