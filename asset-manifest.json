@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/mineralsim/static/css/main.c24c6bae.chunk.css",
+    "main.js": "/mineralsim/static/js/main.88600fb7.chunk.js",
+    "main.js.map": "/mineralsim/static/js/main.88600fb7.chunk.js.map",
+    "runtime-main.js": "/mineralsim/static/js/runtime-main.da6b1a6c.js",
+    "runtime-main.js.map": "/mineralsim/static/js/runtime-main.da6b1a6c.js.map",
+    "static/css/2.61b4cb56.chunk.css": "/mineralsim/static/css/2.61b4cb56.chunk.css",
+    "static/js/2.75272ed6.chunk.js": "/mineralsim/static/js/2.75272ed6.chunk.js",
+    "static/js/2.75272ed6.chunk.js.map": "/mineralsim/static/js/2.75272ed6.chunk.js.map",
+    "index.html": "/mineralsim/index.html",
+    "static/css/2.61b4cb56.chunk.css.map": "/mineralsim/static/css/2.61b4cb56.chunk.css.map",
+    "static/css/main.c24c6bae.chunk.css.map": "/mineralsim/static/css/main.c24c6bae.chunk.css.map",
+    "static/js/2.75272ed6.chunk.js.LICENSE.txt": "/mineralsim/static/js/2.75272ed6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.da6b1a6c.js",
+    "static/css/2.61b4cb56.chunk.css",
+    "static/js/2.75272ed6.chunk.js",
+    "static/css/main.c24c6bae.chunk.css",
+    "static/js/main.88600fb7.chunk.js"
+  ]
+}
